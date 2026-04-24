@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  height:100vh;
+  background:linear-gradient(135deg,#f8d7da,#f3e5e5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container{
+  display:flex;
+  width:900px;
+  height:550px;
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* IZQUIERDA */
+.left{
+  width:40%;
+  background:linear-gradient(135deg,#e89cae,#b76e79);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+}
+
+.left h1{
+  font-size:28px;
+}
+
+.left p{
+  margin-top:10px;
+}
+
+/* DERECHA */
+.right{
+  width:60%;
+  padding:30px;
+}
+
+.right h2{
+  margin-bottom:15px;
+}
+
+/* PASOS */
+.steps{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.steps span{
+  width:10px;
+  height:10px;
+  background:#ddd;
+  border-radius:50%;
+}
+
+.steps .active{
+  background:#b76e79;
+}
+
+/* FORM */
+.step{
+  display:none;
+  flex-direction:column;
+  gap:10px;
+}
+
+.step.active{
+  display:flex;
+}
+
+input, textarea{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* BOTON */
+button{
+  padding:10px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(135deg,#e89cae,#b76e79);
+  color:white;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  transform:scale(1.05);
+}

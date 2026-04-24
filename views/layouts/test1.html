@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z&S Estética</title>
+<link rel="stylesheet" href="proyecto.css">
 </head>
+
 <body>
-    
+
+<div class="container">
+
+  <!-- IZQUIERDA -->
+  <div class="left">
+    <h1>Z&S Estética</h1>
+    <p>Realza tu belleza con nosotros 💖</p>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="right">
+
+    <h2>Registro de Cliente</h2>
+
+    <div class="steps">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <form id="form">
+
+      <!-- PASO 1 -->
+      <div class="step active">
+        <input type="text" placeholder="Nombre completo">
+        <input type="date">
+        <button type="button" onclick="next()">Siguiente</button>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="step">
+        <input type="tel" placeholder="Teléfono">
+        <input type="email" placeholder="Correo">
+        <input type="text" placeholder="Dirección">
+        <button type="button" onclick="next()">Siguiente</button>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="step">
+        <textarea placeholder="Alergias"></textarea>
+        <textarea placeholder="Enfermedades"></textarea>
+        <textarea placeholder="Medicamentos"></textarea>
+        <button type="submit">💖 Registrar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+let current = 0;
+const steps = document.querySelectorAll(".step");
+const indicators = document.querySelectorAll(".steps span");
+
+function next(){
+  steps[current].classList.remove("active");
+  indicators[current].classList.remove("active");
+
+  current++;
+  
+  steps[current].classList.add("active");
+  indicators[current].classList.add("active");
+}
+</script>
+
 </body>
 </html>
