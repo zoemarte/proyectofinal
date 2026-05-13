@@ -1,0 +1,91 @@
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#f5f6fa;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-size:22px;
+  font-weight:600;
+}
+
+/* CONTENEDOR */
+.container{
+  padding:20px;
+}
+
+/* TARJETAS */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  margin:0;
+  font-size:16px;
+  color:#777;
+}
+
+.card h2{
+  margin:10px 0 0;
+  font-size:28px;
+}
+
+/* COLORES */
+.green{border-left:6px solid #4CAF50;}
+.red{border-left:6px solid #f44336;}
+.blue{border-left:6px solid #2196F3;}
+.orange{border-left:6px solid #ff9800;}
+
+/* TABLA */
+.table-section{
+  margin-top:30px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 10px rgba(0,0,0,0.08);
+}
+
+th, td{
+  padding:12px;
+  text-align:center;
+}
+
+th{
+  background:#ff9a9e;
+  color:white;
+}
+
+tr:nth-child(even){
+  background:#f2f2f2;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header{
+    font-size:18px;
+  }
+}

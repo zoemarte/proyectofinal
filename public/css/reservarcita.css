@@ -1,0 +1,188 @@
+:root {
+    --bg-color: #f2ede4;
+    --card-bg: #ffffff;
+    --accent-brown: #6b5e4c;
+    --text-main: #4a4a4a;
+    --text-light: #8e8e8e;
+    --border-color: #d1ccc0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.booking-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--bg-color);
+}
+
+/* Header & Stepper */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+h1 { font-size: 1.1rem; letter-spacing: 2px; font-weight: 400; }
+
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 50px;
+}
+
+.step { text-align: center; color: var(--text-light); font-size: 0.9rem; }
+.step.active { color: var(--text-main); }
+
+.circle {
+    width: 35px;
+    height: 35px;
+    background: var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    color: white;
+}
+
+.step.active .circle { background: var(--accent-brown); }
+
+.line {
+    flex-grow: 1;
+    height: 1.5px;
+    background: var(--border-color);
+    margin: 0 15px;
+    margin-bottom: 25px;
+}
+
+/* Layout Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+}
+
+/* Calendario */
+.date-input-container {
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    border: 2px solid var(--accent-brown);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+.input-wrapper input { border: none; outline: none; width: 100%; }
+
+.calendar-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.calendar-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.calendar-table td, .calendar-table th {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+}
+
+.selected-day {
+    background: var(--accent-brown);
+    color: white;
+    border-radius: 50%;
+}
+
+/* Servicios */
+.services-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    background: #f8f6f2;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.service-card.full-width { grid-column: span 2; }
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #e0ddd5;
+    padding-bottom: 5px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 0.85rem;
+}
+
+/* Botón Siguiente */
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.next-btn {
+    background: var(--accent-brown);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.next-btn:hover { opacity: 0.9; }
+
+/* Radio Buttons personalizados */
+input[type="radio"] {
+    accent-color: var(--accent-brown);
+    cursor: pointer;
+}
